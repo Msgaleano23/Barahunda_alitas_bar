@@ -136,3 +136,19 @@ footer {
       right: 15px;
   }
 }
+
+/* Ocultar secciones por defecto */
+.hidden {
+  display: none;
+}
+
+/* Animación de despliegue */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
