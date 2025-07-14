@@ -19,7 +19,9 @@ slideButtons.forEach((btn, index) => {
 backHomeBtn.addEventListener("click", () => {
   landing.style.display = "flex";
   backHomeBtn.style.display = "none";
-  sections.forEach(section => section.style.display = "none");
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
