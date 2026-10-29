@@ -9,6 +9,7 @@ const sections = document.querySelectorAll(".menu-page");
 slideButtons.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     landing.style.display = "none";
+    document.body.classList.add("in-menu");
     backHomeBtn.style.display = "block";
     showSection(index);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -18,6 +19,7 @@ slideButtons.forEach((btn, index) => {
 // Botón para volver al inicio
 backHomeBtn.addEventListener("click", () => {
   landing.style.display = "flex";
+  document.body.classList.remove("in-menu");
   backHomeBtn.style.display = "none";
   sections.forEach(section => {
     section.style.display = "none";
